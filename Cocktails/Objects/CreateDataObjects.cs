@@ -40,7 +40,7 @@ namespace Cocktails.Objects
             var ingredientUnit3 = new Unit() { UnitType = "Count" };
             var ingredientUnit4 = new Unit() { UnitType = "Slice" };
 
-            con.Unit.AddRange(new List<Unit>() { ingredientUnit, ingredientUnit2, ingredientUnit3, ingredientUnit4 });
+            con.Units.AddRange(new List<Unit>() { ingredientUnit, ingredientUnit2, ingredientUnit3, ingredientUnit4 });
 
         }
 
@@ -59,11 +59,11 @@ namespace Cocktails.Objects
             var ingredient = new Ingredient()
                 { IngredientAmount = 30, 
                     IngredientType = con.IngredientTypes.FirstOrDefault(x => x.IngredientTypeName == "Rom"),
-                    Unit = con.Unit.FirstOrDefault(x => x.UnitType == "ml") };
+                    Unit = con.Units.FirstOrDefault(x => x.UnitType == "ml") };
             var ingredient2 = new Ingredient()
-                { IngredientAmount = 300, IngredientType = con.IngredientTypes.FirstOrDefault(x => x.IngredientTypeName == "Cola"), Unit = con.Unit.FirstOrDefault(x => x.UnitType == "ml") };
+                { IngredientAmount = 300, IngredientType = con.IngredientTypes.FirstOrDefault(x => x.IngredientTypeName == "Cola"), Unit = con.Units.FirstOrDefault(x => x.UnitType == "ml") };
             var ingredient3 = new Ingredient()
-                { IngredientAmount = 1, IngredientType = con.IngredientTypes.FirstOrDefault(x => x.IngredientTypeName == "Lime"), Unit = con.Unit.FirstOrDefault(x => x.UnitType == "slice") };
+                { IngredientAmount = 1, IngredientType = con.IngredientTypes.FirstOrDefault(x => x.IngredientTypeName == "Lime"), Unit = con.Units.FirstOrDefault(x => x.UnitType == "slice") };
             con.Ingredients.AddRange(new List<Ingredient>() { ingredient, ingredient2, ingredient3 });
 
         }

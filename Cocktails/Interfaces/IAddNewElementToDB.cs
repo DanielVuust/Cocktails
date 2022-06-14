@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Cocktails.Interfaces;
 
-namespace Cocktails
+namespace Cocktails.Interfaces
 {
-    //public class CreateNewElement : IDrinkDataAction
-    //{
-
-    //}
+    public interface IAddNewElementToDB
+    {
+        public bool AddNewElement();
+    }
 }

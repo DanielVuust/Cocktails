@@ -20,7 +20,7 @@ namespace Cocktails
         public DbSet<Drink> Drinks { get; set; }
         public DbSet<Ingredient> Ingredients { get; set; }
         public DbSet<IngredientType> IngredientTypes { get; set; }
-        public DbSet<Unit> Unit { get; set; }
+        public DbSet<Unit> Units { get; set; }
         public DbSet<DrinkGlass> Glasses { get; set; }
     }
 }

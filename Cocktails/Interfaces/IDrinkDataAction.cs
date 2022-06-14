@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cocktails.Interfaces
 {
-    interface IDrinkDataAction
+    public interface IDrinkDataAction
     {
         void ExecuteAction();
     }

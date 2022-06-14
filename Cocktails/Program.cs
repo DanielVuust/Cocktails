@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Cocktails.DataAction;
 using Cocktails.Objects;
 
 namespace Cocktails
@@ -9,17 +10,25 @@ namespace Cocktails
     {
         static void Main(string[] args)
         {
-            
+            //CreateDataObjects createDataObjects = new CreateDataObjects();
 
-            CreateDataObjects createDataObjects = new CreateDataObjects();
+            while (true)
+            {
+                Console.Clear();
+                DisplayActions displayDrinkActions = new DisplayActions();
+                displayDrinkActions.DisplayAllDrinkActions();
 
-            Console.WriteLine("1. Create");
-            Console.WriteLine("2. Delete");
-            Console.WriteLine("3. Edit");
-            int s = Convert.ToInt32(Console.ReadLine());
+                string action = Console.ReadLine();
 
-            
-            Console.WriteLine("Hello World!");
+                ChooseAction chooseAction = new ChooseAction();
+                chooseAction.GetAction(action).ExecuteAction();
+
+
+                Console.WriteLine("Hello World!");
+
+            }
+
+
         }
     }
 }
